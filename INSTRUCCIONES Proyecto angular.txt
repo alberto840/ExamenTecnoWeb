@@ -1,0 +1,8 @@
+Para hacer correr la APP en la terminal:
+ng serve --open
+
+El enlace de GIT:
+https://github.com/alberto840/ProyectoAngular1
+
+El video esta en drive, el link es:
+https://drive.google.com/file/d/1SeQ9m8vR_2j4PSZB5wL_Wu5S_igTOG3J/view?usp=sharing
