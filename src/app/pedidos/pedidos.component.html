@@ -1,29 +1,25 @@
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="pedidos.component.css">
 <div class="m-5 row">
-<form class="col-md-6">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Direccion</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Aceptar los terminos y condiciones</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar pedido</button>
-</form>
-
-<form class="col-md-6">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre completo</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3 pt-4">
-    <label for="exampleInputEmail1" class="form-label">Nombre de producto</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-</form>
+  <section class="form-register">
+    <h4>Formulario de Pedido</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre Completo">
+    <input class="controls" type="text" name="nit" id="nit" placeholder="Ingrese su Nit">
+    <input class="controls" type="date" name="correo" id="correo" placeholder="Fecha">
+    <p>Tipo de Maquinaria</p>
+    <select class="controls" name="menu">
+      <option value="1" selected>COMPACTADORES</option>
+      <option value="2">EXCAVADORAS</option>
+      <option value="3">HOJAS DE EMPUJE</option>
+    </select>
+    <p>Producto</p>
+    <select class="controls" name="menu2">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    
+    <input class="botons" type="submit" value="Registrar">
+    
+  </section>
 </div>
