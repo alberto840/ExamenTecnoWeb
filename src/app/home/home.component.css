@@ -11,3 +11,70 @@
     font-size: 3.5rem;
   }
 }
+.carousel{
+  width: 90%;
+  margin-left: 6%;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.container
+{
+  margin-left: 12%;
+ position:relative;
+ display:flex;
+ -webkit-box-reflect: below 1px linear-gradient(transparent, transparent,transparent, #0004) ;
+ justify-content: center;
+  width: 100%;
+ 
+}
+.container .box
+{
+ position:relative;
+ width:320px;
+ height:400px;
+ background:#444;
+ margin:0 10px;
+ border-radius:20px;
+ background:linear-gradient(45deg,#F6DC22 25%,
+ #000 25%,#000 50%,#F6DC22 50%,#F6DC22 75%,
+      #000 75%,#000 100%);
+ background-size: 40px 40px;
+ filter: grayscale(1);
+ animation: animateBg 1s linear infinite;
+ animation-play-state: paused;
+ transition: filter 1s;
+ display: flex;
+ justify-content: center;
+}
+.container .box:nth-child(){
+  background:linear-gradient(135deg,#2386F5 25%,
+  #000 25%,#000 50%,#2386F5 50%,#2386F5 75%,
+       #000 75%,#000 100%);
+}
+
+.container .box:hover{
+
+  animation-play-state: running;
+  filter: grayscale(0);
+}
+
+@keyframes animateBg {
+  0%{
+    background-position: 0;
+  }
+  0%{
+    background-position: 40px;
+  }
+}
+.container .box img{
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  transition: height 0.5s;
+}
+.container .box:hover img{
+  height: 480px;
+}
