@@ -11,5 +11,7 @@ export class ContactosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public enviar(){
+    alert("Se envio el formulario, pronto nos pondremos en contacto contigo");
+  }
 }
