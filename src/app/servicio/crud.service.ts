@@ -8,11 +8,16 @@ import { Empleado } from './empleado';
 })
 export class CrudService {
 API: string='http://localhost/index.php/'
+API2: string='http://localhost/index3.php/'
+
   constructor(private clienteHttp:HttpClient){}
     AgregarPedido(datosPedido:Empleado):Observable<any>{
       return this.clienteHttp.post(this.API+"?insertar=1",datosPedido);
     }
     obtenerEmpleados(){
       return this.clienteHttp.get(this.API);
+    }
+    obtenerMaquinaria(){
+      return this.clienteHttp.get(this.API2);
     }
 }
