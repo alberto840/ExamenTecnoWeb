@@ -2,9 +2,10 @@
   <link rel="stylesheet" href="pedidos.component.css">
 <div class="m-5 row">
   <section class="form-register">
+    <form [formGroup]="formularioDePedidos" (ngSubmit)="enviarDatos()">
     <h4>Formulario de Pedido</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre Completo">
-    <input class="controls" type="text" name="nit" id="nit" placeholder="Ingrese su Nit">
+    <input class="controls" type="text" formControlName="nombre" name="nombres" id="nombres" placeholder="Ingrese su Nombre Completo">
+    <input class="controls" type="text" formControlName="correo" name="nit" id="nit" placeholder="Correo electronico">
     <input class="controls" type="date" name="correo" id="correo" placeholder="Fecha">
     <p>Tipo de Maquinaria</p>
     <select class="controls" name="menu">
@@ -18,8 +19,29 @@
       <option value="2">2</option>
       <option value="3">3</option>
     </select>
-    
     <input class="botons" type="submit" value="Registrar">
-    
+  </form><br><br><br><br><br>
   </section>
+
+  <section>
+    <br>
+  <h1>Lista de Pedidos</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pedido of pedidos; let iControl=index">
+        <td>{{ pedido.id -69 }}</td>
+        <td>{{ pedido.nombre }}</td>
+        <td>{{ pedido.correo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 </div>
